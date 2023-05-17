@@ -30,5 +30,21 @@ namespace RPGSaga.Classes.HeroGenerator
             }
                 return heroList;
         }
+
+        public string newFirstName(){
+            Console.WriteLine("What is your name?");
+            string[] firstNames = { "John", "Emily", "Michael", "Sophia", "David", "Olivia", "Daniel", "Emma", "Matthew", "Isabella" };
+            Random random = new Random();
+            int index = random.Next(firstNames.Length);
+            return firstNames[index];
+        }
+
+        public string newLastName(){
+            Console.WriteLine("What is your name?");
+            string[] lastNames = { "Smith", "Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor" };
+            Random random = new Random();
+            int index = random.Next(lastNames.Length);
+            return lastNames[index];
+        }
     }
 }
