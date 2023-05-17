@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RPGSaga.Classes.HeroGenerator;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,31 @@ namespace RPGSaga.Classes.Heroes
 {
     public class Hero
     {
-        private string name;
+        private string firstName;
+        private string lastName;
 
-        public Hero(string name)
+        public Hero(
+            string firstName,
+            string lastName
+            )
         {
-            this.name = name;
+            this.firstName = firstName;
+            this.lastName = lastName;
         }
-        public string getHero()
+
+        //public string getFirstName() { return firstName; }
+        public string getLastName() { return lastName; }
+
+        internal object GetFirstName()
         {
-            return this.name;
+            return firstName;
         }
+        internal object GetLastName()
+        {
+            return lastName;
+        }
+
     }
+
+
 }

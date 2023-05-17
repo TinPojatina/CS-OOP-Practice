@@ -12,13 +12,20 @@ namespace RPGSaga.Classes.HeroGenerator
     {
         public Generator() { }
 
-        public List<Hero> GenerateHeroes(int number)
+        public List<Hero> HeroList(int peasantCount, int heroCount)
+        {
+            var heroGen = new Generator();
+            List<Hero> list = heroGen.GenerateHeroes(peasantCount, heroCount);
+            return list;
+        }
+
+        public List<Hero> GenerateHeroes(int numPeasants, int numHeroes)
         {
             var heroList = new List<Hero>();
             
-            for(int i = 0; i < number; i++)
+            for(int i = 0; i < numHeroes; i++)
             {
-                Hero hero = new Hero("HELP ME");
+                Hero hero = new Hero("Help", "Me");
                 heroList.Add(hero);
             }
                 return heroList;
