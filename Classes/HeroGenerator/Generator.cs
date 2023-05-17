@@ -25,7 +25,7 @@ namespace RPGSaga.Classes.HeroGenerator
             
             for(int i = 0; i < numHeroes; i++)
             {
-                Hero hero = new Hero("Help", "Me");
+                Hero hero = new Hero(newFirstName(),newLastName());
                 heroList.Add(hero);
             }
                 return heroList;
