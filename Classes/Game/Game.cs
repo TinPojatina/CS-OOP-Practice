@@ -12,12 +12,12 @@ namespace RPGSaga.Classes.Game
         {
             Console.Write("Please enter the desired number of heroes: ");
             string heroCount = Console.ReadLine();
-            Console.Write("Please enter the maximum number of peasants in the game: ");
-            string maxPeasants = Console.ReadLine();
+            // Console.Write("Please enter the maximum number of peasants in the game: ");
+            // string maxPeasants = Console.ReadLine();
 
-            if (int.TryParse(heroCount, out int count) && int.TryParse(maxPeasants, out int max))
+            if (int.TryParse(heroCount, out int count) /*&& int.TryParse(maxPeasants, out int max)*/)
             {
-                Run(max, count);
+                Run(count, 0);
             }
             else
             {
@@ -31,7 +31,7 @@ namespace RPGSaga.Classes.Game
             List<Hero> heroList = gen.GenerateHeroes(max);
             foreach (Hero hero in heroList)
             {
-                string idk = $"{hero.GetFirstName()} {hero.GetLastName()}";
+                string idk = $"{hero.FirstName} {hero.LastName}";
                 Console.WriteLine("Hero: " + idk);
             }
         }
