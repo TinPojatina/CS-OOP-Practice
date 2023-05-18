@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RPGSaga.Classes.Heroes;
+using RPGSaga.Classes.Weapon;
 
 namespace RPGSaga.Classes.HeroGenerator
 {
@@ -45,6 +46,16 @@ namespace RPGSaga.Classes.HeroGenerator
             Random random = new Random();
             int index = random.Next(lastNames.Length);
             return lastNames[index];
+        }
+
+        public int numGenerator(int min, int max){
+            Random random = new Random();
+            int num = random.Next(min, max);
+            return num;
+        }
+
+        public Weapons weaponGenerator(){
+            
         }
     }
 }
