@@ -28,7 +28,7 @@ namespace RPGSaga.Classes.Game
         public void Run(int max, int number)
         {
             Generator gen = new Generator();
-            List<Hero> heroList = gen.GenerateHeroes(max, number);
+            List<Hero> heroList = gen.GenerateHeroes(max);
             foreach (Hero hero in heroList)
             {
                 string idk = $"{hero.GetFirstName()} {hero.GetLastName()}";
