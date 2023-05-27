@@ -31,8 +31,8 @@ namespace RPGSaga.Classes.Game
             List<Hero> heroList = gen.GenerateHeroes(max);
             foreach (Hero hero in heroList)
             {
-                string idk = $"{hero.FirstName} {hero.LastName}";
-                Console.WriteLine("Hero: " + idk);
+                string heroName = $"{hero.FirstName} {hero.LastName}";
+                Console.WriteLine("Hero: " + heroName);
             }
         }
     }

@@ -47,7 +47,7 @@ namespace RPGSaga.Classes.HeroGenerator
             return num;
         }
 
-        public Weapon weaponGenerator()
+        public Weapon? weaponGenerator()
         {
             string[] names = { "Spear", "Sword" };
             int randomIndex = random.Next(names.Length);
